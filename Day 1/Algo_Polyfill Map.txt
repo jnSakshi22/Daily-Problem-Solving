@@ -1,0 +1,8 @@
+
+1. Create a function prototype.
+2. Pass a callback function as an argument.
+3. Inside the function create a new empty array.
+4. Create a variable for this ( refers to global Object). 
+5. Using loop. ( 0 to array length)
+6. Inside the loop push the array items into the new array with the callback function.
+7. Final return new updated array.

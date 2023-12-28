@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polyfill Filter</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const originalArray = [1, 8, 3, 56, 76, 43, 67, 78];
+
+  console.log("Original Array:", originalArray);
+
+  Array.prototype.polyfillFilter = function (x) {
+    let newArr = [];
+    let arr = this;
+
+    for (let i = 0; i <= arr.length - 1; i++) {
+      if (x(arr[i])) {
+        newArr.push(x(arr[i]));
+      }
+    }
+    console.log("New Array:", newArr);
+
+    return newArr;
+  };
+
+  const myFunction = (x) => {
+    if (x % 2 == 0) {
+      return x;
+    }
+  };
+
+  const filteredArray = originalArray.polyfillFilter(myFunction);
+
+  console.log("Filtered Array:", filteredArray);
+</script>

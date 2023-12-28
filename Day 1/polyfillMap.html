@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polyfill Map</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const originalArr = [45, 16, 18, 24, 5];
+
+  Array.prototype.polyfillMap = function (x) {
+    let newArr = [];
+    let arr = this;
+
+    console.log("Array: ", arr);
+
+    for (let i = 0; i <= arr.length - 1; i++) {
+      newArr.push(x(arr[i]));
+    }
+    console.log("New Array:", newArr);
+
+    return newArr;
+  };
+  const mappedArr = originalArr.polyfillMap(myFunction);
+
+  function myFunction(x) {
+    return x * 2;
+  }
+  console.log("Mapped Array: ", mappedArr);
+</script>
+
+<!-- The map() method creates a new array by performing a function on each array element.
+
+The map() method does not execute the function for array elements without values.
+
+The map() method does not change the original array. -->
