@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let arr = [-1, 1, 2, 0, 8, 7, 6, 0];
+
+  function findPair(array, targetSum) {
+    let result = [];
+
+    for (let i = 0; i < array.length - 1; i++) {
+      for (let j = i + 1; j < array.length; j++) {
+        if (array[i] + array[j] === targetSum) {
+          result.push([array[i], array[j]]);
+        }
+      }
+    }
+
+    return result;
+  }
+
+  let finalresult = findPair(arr, 0);
+  console.log("Final Result", finalresult);
+</script>

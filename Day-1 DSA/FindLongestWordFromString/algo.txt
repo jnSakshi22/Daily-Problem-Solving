@@ -1,0 +1,9 @@
+Convert String into Array.
+Create function to find longestWord
+Inside function - 
+ - declare 2 new variables
+ - Using loop (0 to array length)
+ - Inside Loop 
+    - conditions for checking items of array length.
+ - return longest word.
+call function.

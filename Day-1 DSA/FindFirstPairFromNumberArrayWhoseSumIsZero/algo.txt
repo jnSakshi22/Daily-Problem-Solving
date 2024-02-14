@@ -1,0 +1,7 @@
+Create Function with 2 arguments (array and sum value)
+Inside Function -
+ - declare a new blank array variable
+ - Using nested loops for checking conditions
+ - In 2nd loop, we are checking our sum conditions
+ - return final results
+Call function
