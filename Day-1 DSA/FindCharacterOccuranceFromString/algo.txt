@@ -1,9 +1,0 @@
-Convert String into Array.
-Create function to find characterOccurence
-Inside function - 
- - declare a new blank object variable
- - Using loop (0 to array length)
- - Inside Loop 
-    - conditions for checking items of array length with count value.
- - return final result.
-call function.
